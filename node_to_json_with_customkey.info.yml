@@ -1,0 +1,9 @@
+name: Node To JSON with customkey
+type: module
+description: 'This module Alter Drupal Site Information Page & Provides URL that shows JSON representation of a given node with custom key.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: AxelerantTest
+configure: system.site_information_settings
+dependencies:
+  - drupal:system

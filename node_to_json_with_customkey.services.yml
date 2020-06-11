@@ -1,0 +1,5 @@
+services:
+  node_to_json_with_customkey.route_subscriber:
+    class: 'Drupal\node_to_json_with_customkey\Routing\SiteApiKeyRouteSubscriber'
+    tags:
+      - { name: event_subscriber }

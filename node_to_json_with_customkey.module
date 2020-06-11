@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * This file contains generic hooks.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function node_to_json_with_customkey_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    case 'help.page.node_to_json_with_customkey':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>';
+      $output .= '<p>' . t('This module provides the "Site API Key" field in the "Site Information" form.') . '</p>';
+      $output .= '<p>' . t('The "Site Information" form can be found at the <a href=":path">Path</a>.', [':path' => '/admin/config/system/site-information']) . '</p>';
+      $output .= '<p>' . t('This module also provides a URL that responds with a JSON representation of a given node of type "page".') . '</p>';
+      $output .= '</p>';
+      return $output;
+  }
+}

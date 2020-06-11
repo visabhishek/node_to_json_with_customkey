@@ -1,0 +1,12 @@
+node_to_json_with_customkey.page_node_to_json:
+  path: '/page_json/{key}/{nid}'
+  defaults:
+    _controller: '\Drupal\node_to_json_with_customkey\Controller\PageNodeToJson::content'
+  options:
+    parameters:
+      key:
+        type: config
+      nid:
+        type: entity:node
+  requirements:
+    _permission: 'access content'
